@@ -1,0 +1,30 @@
+#section {
+  display: block;
+}
+.main {
+  height: 50px;
+  background-image: url("./assets/car5.png");
+  background-image: linear-gradient(0.8);
+  width: 100%;
+  background-size: cover;
+  height: 400px;
+  background-position: center;
+  float: none;
+  overflow: auto;
+}
+.intro {
+  position: absolute;
+  top: 100px;
+  right: 60px;
+  left: 620px;
+  font-weight: 100;
+  font-family: "Courier New", Courier, monospace;
+}
+.main h1 {
+  color: white;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.main p {
+  color: white;
+}

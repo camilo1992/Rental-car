@@ -1,0 +1,24 @@
+.section2 {
+  /* background-color: purple; */
+  width: 100%;
+  height: 500px;
+  /* float: none; */
+}
+
+h3 {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  align-items: center;
+}
+
+.optionContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

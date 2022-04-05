@@ -1,0 +1,24 @@
+.optionCar {
+  margin: 0;
+  height: 100px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: 666469;
+}
+
+label {
+  margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+select {
+  height: 30px;
+  background-color: #2e2834;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 15px;
+}

@@ -1,0 +1,7 @@
+.carContainer {
+  display: flex;
+  background-color: black;
+  height: 400px;
+  justify-content: space-around;
+  opacity: 0.8;
+}

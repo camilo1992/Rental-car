@@ -1,0 +1,27 @@
+.option {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5%;
+  height: 200px;
+  width: 30%;
+}
+
+.numberContainer {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: relative;
+  height: 80px;
+  width: 80px;
+  left: -15px;
+  top: -30px;
+}
+.option p {
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: black;
+  left: 30px;
+  top: 120px;
+  text-align: left;
+}

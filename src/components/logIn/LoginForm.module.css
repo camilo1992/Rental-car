@@ -1,0 +1,56 @@
+.loginFormContainer {
+  position: fixed;
+  top: 23%;
+  left: 36%;
+  z-index: 10;
+  background: gray;
+  border-radius: 10%;
+  width: 340px;
+  height: 250px;
+}
+
+h3,
+p {
+  margin: 0;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.form {
+  position: fixed;
+  overflow: hidden;
+  z-index: 100;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: yellow;
+}
+
+#input {
+  /* position: fixed; */
+  /* overflow: hidden; */
+  /* z-index: 100; */
+  width: 90%;
+  background: #f2f5f7;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.63); */
+  border-radius: 15px;
+  height: 30px;
+  margin-left: 8px;
+}
+
+.buttonLog {
+  /* left: -50px; */
+  /* width: 20px; */
+  /* margin: 0; */
+  /* margin-left: 0; */
+  /* height: 15px; */
+  position: relative;
+}
+
+::placeholder {
+  font-family: "Bitter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+}

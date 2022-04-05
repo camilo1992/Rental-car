@@ -1,0 +1,51 @@
+.containerPopup {
+  display: flex;
+}
+.position {
+  z-index: 100;
+  overflow: hidden;
+  position: relative;
+  left: 160px;
+  top: 340px;
+  width: 150px;
+}
+.popup {
+  position: fixed;
+  overflow: hidden;
+  z-index: 100;
+  top: 20vh;
+  left: 25%;
+  width: 80%;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 300px;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+.desc {
+  font-size: 30px;
+  /* margin: auto; */
+  position: fixed;
+  overflow: hidden;
+  z-index: 100;
+  width: 21%;
+  height: 100px;
+  background-color: yellow;
+  margin-top: 15px;
+  border-top-right-radius: 10%;
+}
+.content {
+  position: fixed;
+  overflow: hidden;
+  z-index: 100;
+  top: 20vh;
+  left: 48.8%;
+  width: 80%;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  background-color: white;
+  height: 400px;
+  width: 300px;
+  opacity: 0.5;
+}

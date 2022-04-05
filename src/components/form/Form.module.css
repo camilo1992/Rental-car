@@ -1,0 +1,71 @@
+.formContainer {
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+.form {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: yellow; */
+  height: 250px;
+  width: 500px;
+}
+
+#input {
+  background: #f2f5f7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.63);
+  border-radius: 15px;
+  height: 25px;
+}
+.names {
+  display: block;
+  height: 25%;
+}
+
+.names div {
+  margin: 15px;
+  display: inline;
+}
+.email {
+  display: block;
+  height: 25%;
+  width: 100%;
+}
+.email input {
+  width: 73%;
+}
+
+.vehicle {
+  height: 25%;
+  display: block;
+}
+.vehicle div {
+  margin: 15px;
+  display: inline;
+}
+
+form button {
+  height: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: #4d4545;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.63);
+  border-radius: 15px;
+  color: yellow;
+  font-size: 15px;
+  height: 25px;
+  width: 200px;
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 700;
+}
+
+::placeholder {
+  font-family: "Bitter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+}

@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./components/home/Home";
+import { useState } from "react";
+import { Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Footer from "./components/footer/Footer";
+import RentCar from "./components/rent-car/RentCar";
+import LoginForm from "./components/logIn/LoginForm";
+function App(props) {
+  const [activeRent, setActiveRent] = useState(true);
 
-function App() {
+  const rentHandler = () => {
+    console.log("clicked");
+    setActiveRent(null);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Route path="/" exact>
+        <Home />
+        {/* <LoginForm /> */}
+      </Route>
+      <Route path="/rent-car">
+        <Layout>
+          <RentCar />
+        </Layout>
+        <Footer />
+      </Route>
     </div>
+    // {activeRent && <Home onShowRent={rentHandler} />};
   );
 }
 
 export default App;
+// https://github.com/cluedevs/ESL_back/blob/main/api/api-gateway-openapi.yaml
+// https://editor.swagger.io/
