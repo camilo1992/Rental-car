@@ -1,16 +1,17 @@
 // rfce
 import React from "react";
 import classes from "./OptionSelect.module.css";
-function OptionSelect(porps) {
+
+function OptionSelect(props) {
   return (
     <div className={classes.optionCar}>
-      <label htmlFor="car-select">{porps.title}</label>
-      <select name="pets" id="pet-select">
-        <option value="">Please choose a {porps.title}--</option>
-        <option value={porps.value}>{porps.value}</option>
-        <option value={porps.value1}>{porps.value1}</option>
-        <option value={porps.value2}>{porps.value2}</option>
-        <option value={porps.value3}>{porps.value3}</option>
+      <label htmlFor="car-select">{props.title}</label>
+      <select onChange={props.onSelect} id={props.title}>
+        <option>Please choose a {props.title}--</option>
+        <option value={props.value}>{props.value}</option>
+        <option value={props.value1}>{props.value1}</option>
+        <option value={props.value2}>{props.value2}</option>
+        <option value={props.value3}>{props.value3}</option>
       </select>
     </div>
   );
