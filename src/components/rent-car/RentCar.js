@@ -2,19 +2,49 @@ import classes from "./RentCar.module.css";
 import OptionSelect from "./OptionSelect";
 import CarSelection from "./CarSelection";
 import PopupCar from "../popup/PopupCar";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useReducer } from "react";
 import { carContext } from "../../context/Carcontext";
+
+const carDetailsReducer = (currentDetails, action) => {
+  switch (action.type) {
+    case "COLOUR":
+      return { ...currentDetails, colour: action.colour };
+    case "DAYS":
+      return { ...currentDetails, days: action.days };
+    case "MODE":
+      return { ...currentDetails, mode: action.mode };
+  }
+};
+
+const initialDetails = {
+  colour: "select Colour Please",
+  days: "select days Please",
+  mode: "select mode Please",
+};
+
 function RentCar() {
+  const carCtx = useContext(carContext);
+  const { handleClick } = carCtx;
+  const [carDetails, dispatch] = useReducer(carDetailsReducer, initialDetails);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const carCtx = useContext(carContext);
+
+  useEffect(() => {
+    handleClick(carDetails);
+  }, [carDetails]);
 
   const selectHandler = (e) => {
-    console.log(e);
-    console.log(e.target.id); // id filter the value we are receiving
-    console.log(e.target.value);
-    // useReducer can keep the state updated and then store it in the global context
+    if (e.target.id === "Colour") {
+      dispatch({ type: "COLOUR", colour: e.target.value });
+    }
+    if (e.target.id === "Days") {
+      dispatch({ type: "DAYS", days: e.target.value });
+    }
+    if (e.target.id === "type of car") {
+      dispatch({ type: "MODE", mode: e.target.value });
+    }
   };
 
   return (
@@ -40,7 +70,7 @@ function RentCar() {
         <OptionSelect
           value1="Electric"
           value2="Gas fueled"
-          title="Type of car"
+          title="type of car"
           onSelect={selectHandler}
         />
       </div>

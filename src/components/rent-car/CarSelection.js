@@ -22,31 +22,36 @@ const DUMMY_DATA = [
   },
 
   {
+    key: 1112,
+    description: "Renault",
+    model: "Clio",
+    color: "Azul",
+    priceDay: 125.0,
+    license: "RFX-804",
     img: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
-    description: "bbbbbbb",
-    key: "xxx",
   },
   {
     img: "https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
-    description: "cccccc",
-    key: "yyy",
+    key: 1113,
+    description: "BMW",
+    model: "325I",
+    color: "Gris",
+    priceDay: 320.0,
+    license: "MNS-317",
   },
 ];
 
 function CarSelection(props) {
-  // console.log(cars);
-  useEffect(() => {
-    const fetchCarData = async () => {
-      const response = await fetch("./cars.json");
-      const data = await response.json();
-      // console.log(data);
-    };
+  // useEffect(() => {
+  //   const fetchCarData = async () => {
+  //     const response = await fetch("./cars.json");
+  //     const data = await response.json();
 
-    fetchCarData();
-  }, []);
+  //   };
 
   // console.log("renderCArd");
   const carCtx = useContext(carContext);
+
   const onClick = (obj) => {
     carCtx.handleClick(obj);
   };
@@ -63,9 +68,13 @@ function CarSelection(props) {
               key: el.key,
               description: el.description,
               img: el.img,
-              // model: el.model,
-              // priceDay: e1.priceDay,
-              // license: el.license,
+              model: el.model,
+              priceDay: el.priceDay,
+              license: el.license,
+              totalPrice:
+                el.priceDay * carCtx.car.days
+                  ? el.priceDay * carCtx.car.days
+                  : " Please select number of days 😀",
             })}
           />
         ))}
@@ -80,6 +89,13 @@ function CarSelection(props) {
               key: el.key,
               description: el.description,
               img: el.img,
+              model: el.model,
+              priceDay: el.priceDay,
+              license: el.license,
+              totalPrice:
+                el.priceDay * carCtx.car.days
+                  ? el.priceDay * carCtx.car.days
+                  : " Please select number of days 😀",
             })}
           />
         ))}
