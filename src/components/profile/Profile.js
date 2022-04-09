@@ -1,5 +1,5 @@
 import classes from "./Profile.module.css";
-import React, { Fragment } from "react";
+import React from "react";
 import { useAuth0 } from "../../context/react-auth0-spa";
 import SavedCars from "./SavedCars";
 import { useContext } from "react";
@@ -7,7 +7,6 @@ import { carContext } from "../../context/Carcontext";
 
 function Profile() {
   const carctx = useContext(carContext);
-  console.log(carctx);
 
   const { loading, user } = useAuth0();
   if (loading || !user) {
@@ -34,7 +33,6 @@ function Profile() {
           license={carctx.car.license}
           colour={carctx.car.colour}
           type={carctx.car.mode}
-          // img={user.picture}
         />
       </div>
     </div>

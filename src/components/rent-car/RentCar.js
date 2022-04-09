@@ -5,6 +5,12 @@ import PopupCar from "../popup/PopupCar";
 import { useContext, useEffect, useReducer } from "react";
 import { carContext } from "../../context/Carcontext";
 
+const initialDetails = {
+  colour: "select Colour Please",
+  days: "select days Please",
+  mode: "select mode Please",
+};
+
 const carDetailsReducer = (currentDetails, action) => {
   switch (action.type) {
     case "COLOUR":
@@ -13,13 +19,10 @@ const carDetailsReducer = (currentDetails, action) => {
       return { ...currentDetails, days: action.days };
     case "MODE":
       return { ...currentDetails, mode: action.mode };
+    default: {
+      return currentDetails;
+    }
   }
-};
-
-const initialDetails = {
-  colour: "select Colour Please",
-  days: "select days Please",
-  mode: "select mode Please",
 };
 
 function RentCar() {
@@ -33,7 +36,7 @@ function RentCar() {
 
   useEffect(() => {
     handleClick(carDetails);
-  }, [carDetails]);
+  }, [carDetails, handleClick]);
 
   const selectHandler = (e) => {
     if (e.target.id === "Colour") {
@@ -49,7 +52,7 @@ function RentCar() {
 
   return (
     <div id="section-rent">
-      <img />
+      <img alt=" people smiling" />
       <div className={classes.searchBar}>
         <OptionSelect
           value1="Blue"

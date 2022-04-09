@@ -37,7 +37,7 @@ const MainNavigation = (props) => {
             </Link>
           </li>
           <li className={active && classes.hide}>
-            <a onClick={onShow}>Rent a car</a>
+            <div onClick={onShow}>Rent a car</div>
           </li>
           <li className={active && classes.hide}>
             <Link to="question-section" smooth={true}>

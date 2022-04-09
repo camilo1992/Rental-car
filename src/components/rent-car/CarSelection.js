@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classes from "./CarSelection.module.css";
 import Carcard from "./Carcard";
 import { Fragment } from "react/cjs/react.production.min";
 import { useContext } from "react";
 import { carContext } from "../../context/Carcontext";
-import cars from "./cars.json";
 
 //  we handle click here using useContext
 // update global state
@@ -42,14 +41,6 @@ const DUMMY_DATA = [
 ];
 
 function CarSelection(props) {
-  // useEffect(() => {
-  //   const fetchCarData = async () => {
-  //     const response = await fetch("./cars.json");
-  //     const data = await response.json();
-
-  //   };
-
-  // console.log("renderCArd");
   const carCtx = useContext(carContext);
 
   const onClick = (obj) => {
