@@ -1,5 +1,4 @@
 import classes from "./Introduction.module.css";
-import { Fragment } from "react/cjs/react.production.min";
 
 const Introduction = () => {
   return (
